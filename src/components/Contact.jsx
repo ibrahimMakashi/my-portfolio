@@ -14,19 +14,26 @@ const Contact = () => {
   const [userEmail, setUserEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const [loading, setLoading] = useState(false);
+
   const sendEmail = () => {
+    setLoading(true);
     if (!userName.trim()) {
       toast.error("Name is required");
+      setLoading(false);
       return;
     }
 
     if (!userEmail.trim() || !userEmail.includes("@")) {
       toast.error("mail is required");
+      setLoading(false);
       return;
     }
 
     if (!message.trim()) {
       toast.error("message is required");
+      setLoading(false);
+
       return;
     }
     const templateParams = {
@@ -49,10 +56,12 @@ const Contact = () => {
           setUserName("");
           setUserEmail("");
           setMessage("");
+          setLoading(false);
         },
         (err) => {
           console.error("FAILED...", err);
           toast.error("Something went wrong. Please try again.");
+          setLoading(false);
         }
       );
   };
@@ -135,7 +144,7 @@ const Contact = () => {
 
         <button className="contact-btn" onClick={sendEmail}>
           <IoMdSend />
-          Send message
+          {loading ? "Sending..." : "Send message"}
         </button>
       </div>
     </div>
