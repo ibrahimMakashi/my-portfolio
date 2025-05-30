@@ -690,6 +690,10 @@ footer h1 {
     width: 90%;
   }
 
+  .my-skills{
+    margin-bottom: 100px;
+  }
+
   .skill-front-end {
     top: 100%;
     left: 18%;
@@ -701,7 +705,7 @@ footer h1 {
   }
 
   .skill-img-box {
-    bottom: 20%;
+    bottom: 0%;
   }
 
   .skill-img-box img {
@@ -714,7 +718,7 @@ footer h1 {
   }
 
   .contact-title {
-    top: -40px;
+    top: 0px;
     left: 25%;
   }
 
