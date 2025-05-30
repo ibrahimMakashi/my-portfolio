@@ -9,7 +9,6 @@ html {
   scroll-padding-top: 100px; /* Adjust based on header height */
 }
 
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: lightgray;
@@ -106,10 +105,7 @@ header {
   backdrop-filter: blur(5px);
   border-radius: 50px;
   box-shadow: 0 0 10px #72a1de41;
- 
 }
-
-
 
 .header-right {
   display: flex;
@@ -163,8 +159,6 @@ header {
   top: 100px;
   transform: scale(0.9);
 }
-
-
 
 /* hero */
 
@@ -324,10 +318,13 @@ header {
 
 .project-info p {
   width: 90%;
-  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  margin-block: 5px;
 }
 
 .project-info button {
+  margin-top: 20px;
   color: white;
   padding: 10px 20px;
   border: 1px solid #727fde;
@@ -690,7 +687,7 @@ footer h1 {
     width: 90%;
   }
 
-  .my-skills{
+  .my-skills {
     margin-bottom: 100px;
   }
 
